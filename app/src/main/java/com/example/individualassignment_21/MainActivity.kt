@@ -10,8 +10,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -145,10 +147,12 @@ fun MakeCard() {
                 drawClock("Prep Time:\n0 mins.")
                 drawClock("Cook Time:\n0 mins.")
             }
+            Spacer(Modifier.size(9.dp))
             Divider(
-                thickness = 24.dp,
-                color = Color.Transparent
+                thickness = 6.dp,
+                color = Color.DarkGray
             )
+            Spacer(Modifier.size(9.dp))
             Text(
                 text = "Ingredients:",
                 fontSize = 24.sp,
@@ -162,11 +166,14 @@ fun MakeCard() {
                 "0 cups water",
                 "0 tsp salt"),
                 modifier = Modifier
-                    .padding(horizontal = 8.dp))
-//            Divider(
-//                thickness = 0.dp,
-//                color = Color.Transparent
-//            )
+                    .padding(horizontal = 8.dp)
+                    .height(height = 150.dp))
+            Spacer(Modifier.size(9.dp))
+            Divider(
+                thickness = 6.dp,
+                color = Color.DarkGray
+            )
+            Spacer(Modifier.size(9.dp))
             Text(
                 text = "Instructions:",
                 fontSize = 24.sp,
